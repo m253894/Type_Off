@@ -11,7 +11,7 @@ class Button:
         self.button_color = (0, 0, 0)
         self.text_color = (255, 255, 255)
         self.font = pygame.font.SysFont('verdana', 70)
-        self.rect = pygame.Rect(x, y, self.width, self.height)
+        self.rect = pygame.Rect(int(x), int(y), self.width, self.height)
 
     def create_text(self, msg):
         # rendering text

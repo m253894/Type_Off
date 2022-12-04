@@ -6,7 +6,7 @@ from play import Button
 from background import Background
 import operations
 from random import randint
-
+import keydown
 
 class TypeOff:
     # Initialize game
@@ -27,15 +27,33 @@ class TypeOff:
         self.menu = True
         self.mouse_pos = pygame.mouse.get_pos()
         # instance of bubble
+        self.bubs = Bubble(self, operations.lvl2)
         self.create_bubbles()
+        self.bubs.check_collision(self.bubbles)
+        self.jam = pygame.mixer.music.load('images/Jellyfish Jam.mp3')
 
     def create_bubbles(self):
-        bubs = Bubble(self, operations.lvl2)
-        for letter in operations.lvl2:
-            self.bubbles.add(bubs)
+        # prints each bubble with its own image
+        for pic in self.bubs.pics:
+            self.bubs = Bubble(self, operations.lvl2)
+            self.bubs.image = pic
+            self.bubbles.add(self.bubs)
 
-    def run_game(self):  # Game Loop
+    def pop(self):
+        key_list = keydown.keydown()
+        # loop through each bubble in the group
+        for bubble in self.bubbles:
+            for key in self.bubs.kills:
+                # if the bubbles assigned kill key is in the kills list and the key pressed list, remove it.
+                if key in key_list:
+                    self.bubbles.remove(bubble)
+                    key_list.remove(key)
+                else:
+                    pass
+
+    def run_game(self): # Game Loop
         while True:
+            pygame.mixer.music.play(2)
             # main menu loop
             while self.menu:
                 # drawing all components of main menu screen
@@ -53,14 +71,13 @@ class TypeOff:
                         self.mouse_pos = pygame.mouse.get_pos()
                     if self.single.rect.collidepoint(self.mouse_pos) or self.multi.rect.collidepoint(self.mouse_pos):
                         self.menu = False
+            pygame.mixer.music.play(2)
             # check for mouse click on either button to start its respective game mode.
             self.screen.fill(self.player_screen)
+            self.pop()
             self.bubbles.draw(self.screen)
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    sys.exit()
             pygame.display.flip()
-            sleep(3)
+
 
 if __name__ == '__main__':
     to = TypeOff()
