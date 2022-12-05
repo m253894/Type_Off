@@ -22,5 +22,3 @@ class Button:
         self.create_text(msg)
         self.screen.fill(self.button_color, self.rect)
         self.screen.blit(self.msg_image, self.rect)
-
-

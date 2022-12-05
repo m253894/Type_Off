@@ -39,4 +39,4 @@ class Bubble(Sprite):
                 self.rect.right = 1200
             if self.rect.bottom >= 800:
                 self.rect.bottom = 800
-            self.kill()
+

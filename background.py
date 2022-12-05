@@ -1,7 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
-
+# Blakeley Cremer helped me pick and insert a background.
 # background class
 class Background(Sprite):
     def __init__(self):

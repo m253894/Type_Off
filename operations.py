@@ -15,5 +15,6 @@ letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
 lvl1 = random.choice(letters)
 
 words2 = ['cat', 'toy', 'hat', 'cow', 'pig', 'her', 'him', 'yes', 'bad', 'fig', 'jug', 'kit', 'let', 'our', 'pet', 'rub',
-          'sit', 'tag', 'van', 'zip']
+          'sit', 'tag', 'van', 'zip', 'wow', 'wax', 'fax', 'joy', 'vax', 'six', 'die', 'eat', 'too', 'leg', 'saw', 'tug'
+          , 'due', 'sun', 'get', 'guy', 'mow', 'cry', 'rib', 'kid', 'tan', 'fly', 'bad', 'bat', 'bum', 'art', 'peg']
 lvl2 = random.choice(words2)
