@@ -6,7 +6,7 @@
 * you want to type out as many words as possible in 60 seconds
 * click an option to either play alone or against a friend
 * type the words using the keyboard
-*each bubble is worth ten points
+* each bubble is worth ten points
 * press the 'x' in the top right corner to exit at any time
 
 
