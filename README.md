@@ -1,13 +1,18 @@
 # Welcome to Type Off!
 
-# Type off is the multiplayer typing to game to help you learn the keyboard with a friend.
-# First you'll pick a level of difficulty based on how well you and a friend know the board.
-# You and your friend will take turns playing, 
-# and you'll click keys corresponding to the letters on the screen.
-# If you make a word out of those letters, you'll get bonus points!
-# The player with the most points from that round wins!
+![Gameplay](https://user-images.githubusercontent.com/116081475/205585270-c8480bc5-da10-46a1-8381-312f953af006.PNG)
 
-# Have fun and happy typing!
+### How to Play
+* you want to type out as many words as possible in 60 seconds
+* click an option to either play alone or against a friend
+* type the words using the keyboard
+*each bubble is worth ten points
+* press the 'x' in the top right corner to exit at any time
 
 
- 
+
+
+
+
+
+##### Blakeley Cremer helped edit subject matter of README FILE
